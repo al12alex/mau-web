@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mekedela Amba University - Innovation Technology</title>
+    <style>
+            /* style.css */
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Header */
+        
+        .main-header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            max-height: 70px;
+            margin-right: 15px;
+        }
+        
+        .logo h1 {
+            margin: 0;
+            color: #007bff;
+            font-size: 1.8em;
+        }
+        
+        .logo .tagline {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
+        }
+        
+        .main-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        
+        .main-nav ul li {
+            margin-left: 20px;
+            position: relative;
+        }
+        
+        .main-nav ul li:first-child {
+            margin-left: 0;
+        }
+        
+        .main-nav ul li a,
+        .dropdown-btn,
+        .nested-dropdown-btn,
+        .form-btn {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            text-align: left;
+            transition: color 0.3s ease;
+        }
+        
+        .main-nav ul li a:hover,
+        .dropdown-btn:hover,
+        .nested-dropdown-btn:hover,
+        .form-btn:hover {
+            color: #007bff;
+        }
+        /* Dropdown Menu */
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            left: 0;
+            border-radius: 4px;
+            padding: 5px 0;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        
+        .dropdown.show .dropdown-content {
+            display: block;
+        }
+        /* Nested Dropdown */
+        
+        .nested-dropdown {
+            position: relative;
+        }
+        
+        .nested-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 180px;
+            box-shadow: 0px 8px
+    </style>
+
+    <body>
+        <header class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"><img src="mau_logo.png" alt="MAU Logo"></a>
+                    <h1>Mekedela Amba University</h1>
+                    <p class="tagline">Innovation & Technology Hub</p>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <button class="dropdown-btn">About Us <i class="fas fa-caret-down"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#">About Us MAU</a>
+                                <a href="#">President Information</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <button class="dropdown-btn">Services <i class="fas fa-caret-down"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#">Web App Dev</a>
+                                <a href="#">Software Dev</a>
+                                <li class="nested-dropdown">
+                                    <button class="nested-dropdown-btn">Tutorials <i class="fas fa-caret-right"></i></button>
+                                    <div class="nested-dropdown-content">
+                                        <a href="#">Video Tutorials</a>
+                                        <a href="#">Creative Projects</a>
+                                    </div>
+                                </li>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <button class="dropdown-btn">Learning Websites <i class="fas fa-caret-down"></i></button>
+                            <div class="dropdown-content">
+                                <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+                                <a href="https://www.udacity.com/" target="_blank">Udacity</a>
+                                <a href="https://www.udemy.com/" target="_blank">Udemy</a>
+                                <a href="https://www.codecademy.com/" target="_blank">Codecademy</a>
+                                <a href="https://www.javatpoint.com/" target="_blank">Javatpoint</a>
+                            </div>
+                        </li>
+                        <li><button class="form-btn" onclick="toggleForm('registrationForm')">Registration</button></li>
+                        <li><button class="form-btn" onclick="toggleForm('loginForm')">Login</button></li>
+                    </ul>
+                </nav>
+                <button class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            </div>
+        </header>
+
+        <div class="container">
+            <section class="hero">
+                <div class="hero-content">
+                    <h2 class="animate__animated animate__fadeInDown">Welcome to the Innovation Hub</h2>
+                    <p class="movable-text animate__animated animate__fadeInUp animate__delay-0-5s">Discover the future of technology at Mekedela Amba University.</p>
+                    <a href="#" class="button animate__animated animate__fadeInUp animate__delay-1s">Explore More</a>
+                </div>
+                <img src="innovation_hero.jpg" alt="Innovation Technology" class="hero-image animate__animated animate__fadeInRight animate__delay-0-7s">
+            </section>
+
+            <div id="registrationForm" class="form-container animate__animated animate__fadeIn">
+                <h2>User Registration</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                        <p id="emailError" class="error-message"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Create a password" required>
+                        <p id="passwordError" class="error-message"></p>
+                    </div>
+                    <button type="submit" class="button">Register</button>
+                </form>
+            </div>
+
+            <div id="loginForm" class="form-container animate__animated animate__fadeIn">
+                <h2>User Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address:</label>
+                        <input type="email" id="loginEmail" name="loginEmail" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password:</label>
+                        <input type="password" id="loginPassword" name="loginPassword" placeholder="Your password" required>
+                    </div>
+                    <button type="submit" class="button">Login</button>
+                </form>
+            </div>
+
+            <section class="features">
+                <h2>Key Features & Innovations</h2>
+                <div class="feature-grid">
+                    <div class="feature-item animate__animated animate__fadeInLeft">
+                        <i class="fas fa-robot fa-3x"></i>
+                        <h3>AI & Robotics Lab</h3>
+                        <p>Explore the cutting-edge world of Artificial Intelligence and Robotics with our state-of-the-art laboratory.</p>
+                    </div>
+                    <div class="feature-item animate__animated animate__fadeInUp">
+                        <i class="fas fa-code fa-3x"></i>
+                        <h3>Software Development Center</h3>
+                        <p>Develop innovative software solutions and applications in our collaborative development center.</p>
+                    </div>
+                    <div class="feature-item animate__animated animate__fadeInRight">
+                        <i class="fas fa-network-wired fa-3x"></i>
+                        <h3>Advanced Networking</h3>
+                        <p>Learn about the latest networking technologies and build robust communication systems.</p>
+                    </div>
+                    <div class="feature-item animate__animated animate__fadeInLeft animate__delay-0-5s">
+                        <i class="fas fa-lightbulb fa-3x"></i>
+                        <h3>Innovation Workshops</h3>
+                        <p>Participate in hands-on workshops designed to foster creativity and problem-solving skills.</p>
+                    </div>
+                    <div class="feature-item animate__animated animate__fadeInUp animate__delay-0-5s">
+                        <i class="fas fa-graduation-cap fa-3x"></i>
+                        <h3>Tech-Focused Curriculum</h3>
+                        <p>Our curriculum is designed to equip you with the skills needed to excel in the rapidly evolving tech industry.</p>
+                    </div>
+                    <div class="feature-item animate__animated animate__fadeInRight animate__delay-0-5s">
+                        <i class="fas fa-project-diagram fa-3x"></i>
+                        <h3>Research & Development</h3>
+                        <p>Engage in groundbreaking research projects and contribute to technological advancements.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="movable-content-section">
+                <h2>Interactive Technology Showcase</h2>
+                <p class="movable-text animate__animated animate__slideInLeft">Witness dynamic demonstrations of our latest technological innovations.</p>
+                <div class="movable-image-container animate__animated animate__slideInRight">
+                    <img src="interactive_tech.jpg" alt="Interactive Technology" class="movable-image">
+                    <p class="image-caption">Experience the power of interactive technology.</p>
+                </div>
+            </section>
+
+            <section class="social-media">
+                <h3>Stay Connected</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube fa-2x"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                </div>
+            </section>
+        </div>
+
+        <footer class="main-footer">
+            <div class="container">
+                <p>&copy; 2025 Mekedela Amba University - Innovation Technology</p>
+                <ul>
+                    <li><a href="#">Academic Programs</a></li>
+                    <li><a href="#">Research Initiatives</a></li>
+                    <li><a href="#">Student Portal</a></li>
+                    <li><a href="#">Faculty & Staff</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburgerMenu = document.querySelector('.hamburger-menu');
+                const mainMenu = document.querySelector('.main-nav ul');
+                const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+                const nestedDropdownBtns = document.querySelectorAll('.nested-dropdown-btn');
+                const formContainers = document.querySelectorAll('.form-container');
+
+                hamburgerMenu.addEventListener('click', function() {
+                    mainMenu.classList.toggle('open');
+                });
+
+                dropdownBtns.forEach(btn => {
+                    btn.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const dropdownContent = this.nextElementSibling;
+                        dropdownContent.classList.toggle('show');
+                    });
+                });
+
+                nestedDropdownBtns.forEach(btn => {
+                    btn.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const nestedDropdownContent = this.nextElementSibling;
+                        nestedDropdownContent.classList.toggle('show');
+                        this.querySelector('.fa-caret-right').classList.toggle('rotate');
+                    });
+                });
+
+                window.addEventListener('click', function(event) {
+                    if (!event.target.matches('.dropdown-btn') && !event.target.matches('.fa-caret-down')) {
+                        const dropdownContents = document.querySelectorAll('.dropdown-content');
+                        dropdownContents.forEach(content => {
+                            if (content.classList.contains('show')) {
+                                content.classList.remove('show');
+                            }
+                        });
+                    }
+                    if (!event.target.matches('.nested-dropdown-btn') && !event.target.matches('.fa-caret-right')) {
+                        const nestedDropdownContents = document.querySelectorAll('.nested-dropdown-content');
+                        nestedDropdownContents.forEach(content => {
+                            if (content.classList.contains('show')) {
+                                content.classList.remove('show');
+                            }
+                        });
+                        const nestedDropdownArrows = document.querySelectorAll('.nested-dropdown-btn .fa-caret-right');
+                        nestedDropdownArrows.forEach(arrow => {
+                            arrow.classList.remove('rotate');
+                        });
+                    }
+                    if (!event.target.matches('.form-btn')) {
+                        formContainers.forEach(form => {
+                            form.style.display = 'none';
+                        });
+                    }
+                });
+
+                function toggleForm(formId) {
+                    formContainers.forEach(form => {
+                        form.style.display = 'none';
+                    });
+                    const selectedForm = document.getElementById(formId);
+                    if (selectedForm) {
+                        selectedForm.style.display = 'block';
+                        selectedForm.classList.add('animate__fadeIn');
+                    }
+                }
+                window.toggleForm = toggleForm; // Make it globally accessible
+
+                // Form Validation
+                const registerForm = document.getElementById('register-form');
+                const emailInput = document.getElementById('email');
+                const passwordInput = document.getElementById('password');
+                const emailError = document.getElementById('emailError');
+                const passwordError = document.getElementById('passwordError');
+
+                registerForm.addEventListener('submit', function(event) {
+                    let isValid = true;
+
+                    if (!/^[a-zA-Z][^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+                        emailError.textContent = 'Email must start with a letter and contain "@" symbol.';
+                        isValid = false;
+                    } else {
+                        emailError.textContent = '';
+                    }
+
+                    if (!/^MAU\d+/.test(passwordInput.value)) {
+                        passwordError.textContent = 'Password must start with "MAU" followed by numbers.';
+                        isValid = false;
+                    } else {
+                        passwordError.textContent = '';
+                    }
+
+                    if (!isValid) {
+                        event.preventDefault();
+                    }
+                });
+
+                // Initial hide of forms
+                formContainers.forEach(form => {
+                    form.style.display = 'none';
+                });
+            });
+        </script>
+    </body>
+
+</html>
